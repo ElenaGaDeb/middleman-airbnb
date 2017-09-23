@@ -1,37 +1,16 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Le Wagon - Middleman - About</title>
-    <link href="stylesheets/application-4f606044.css" rel="stylesheet">
-    <script src="javascripts/application-93de88c9.js"></script>
-    <link href="images/favicon-f15af148.png" rel="icon" type="image/png">
-  </head>
 
-  <body>
+  <div class="padded">
+  <ul class="list-inline text-center padded">
 
-<div id="about">
-  <div class="about-content">
     <h1>This template is built with <i class="fa fa-heart"></i> by</h1>
-    <ul class="list-inline">
+    <% ["ElenaGaDeb", "adeprem"].each do |username| %>
         <li>
-          <img src="images/auriane.jpeg" class="img-circle" alt="Adeprem">
-          <h2>Auriane</h2>
-          <p>
-<a href="http://github.com/ssaunier">              <i class="fa fa-github"></i> ssaunier
-</a>          </p>
-        </li>
-        <li>
-          <img src="images/elena.png" class="img-circle" alt="ElenaGaDeb">
-          <h2>Elena</h2>
-          <p>
-<a href="http://github.com/papillard">              <i class="fa fa-github"></i> papillard
-</a>          </p>
-        </li>
-    </ul>
-  </div>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{username}", class: "img-circle avatar-large" %>
+            <h4><%= username.capitalize %></h4>
+    <a href="http://github.com/{username}"><i class="fa fa-github"></i> <%= username %>
+    </a>
+  </li>
+  <% end %>
+</ul>
 </div>
-</body>
-</html>
+
