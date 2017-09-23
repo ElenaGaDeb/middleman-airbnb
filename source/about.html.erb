@@ -1,16 +1,30 @@
 ---
 title: Le Wagon - Middleman - About
 ---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Le Wagon - Middleman - About</title>
+    <link href="stylesheets/application-4f606044.css" rel="stylesheet" />
+    <script src="javascripts/application-93de88c9.js"></script>
+    <link href="images/favicon-f15af148.png" rel="icon" type="image/png" />
+  </head>
 
-<div id="about">
-  <div class="about-content">
-    <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
-    <ul class="list-inline">
-      <% data.users.each do |user| %>
-        <li>
-          <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
-          <% end %>
+   <body>
+
+    <div id="about">
+      <div class="about-content">
+       <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
+       <ul class="list-inline">
+       <% data.users.each do |user| %>
+         <li>
+            <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
+             <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
+         <% end %>
           <h2><%= user.name %></h2>
           <p>
             <% link_to "https://github.com/#{user.github_nickname}", target: "_blank" do %>
@@ -22,3 +36,5 @@ title: Le Wagon - Middleman - About
     </ul>
   </div>
 </div>
+</body>
+</html>
